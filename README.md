@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# La Consigne de Provence - un projet d'Ecoscience Provence
-
-...
-=======
 # La Consigne du verre - Réseau Consigne
 
 Ce site a pour vocation de sensibiliser les consommateurs sur les intérêts écologiques et économiques de la consigne du verre en comparaison des autres méthodes de traitement des bouteilles de verre usagées comme le recyclage ou la production de nouvelle bouteilles.
@@ -26,4 +21,3 @@ Il vous faut NodeJs d'installer pour installer ce projet en local.
 2. Installez les dépendances via la commande `npm ci`.
 3. Démarrez le serveur via la commande `npm run serverstart`.
 4. Accédez au projet via votre navigateur en tapant l'url `localhost:3000`
->>>>>>> bbenti
