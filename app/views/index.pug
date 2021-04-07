@@ -1,3 +1,361 @@
 extends layout
 block content
   p#punchline Présentation du cycle de vie d'une bouteille consignée
+
+  form(method='POST')
+    h2 Mon don
+    div.type-don 
+      label(for='mensuel') Mensuel
+      input(type='radio', id='mensuel', value ='mensuel', name='type-don', checked='checked')
+      label(for='ponctuel') Ponctuel
+      input(type='radio', id='ponctuel', value ='mensuel', name='type-don')
+
+    //- Selon l'option choisie, l'une des deux div s'affiche
+
+    div.don-mensuel
+      label(for='10') 10
+      input(type='radio', id='10', value='10', name='don-mensuel' checked='checked')
+      label(for='20') 20
+      input(type='radio', id='20', value='20', name='don-mensuel')
+      label(for='20') 30
+      input(type='radio', id='30', value='20', name='don-mensuel')
+
+    div.don-ponctuel
+      label(for='20') 20
+      input(type='radio', id='20', value='20', name='don-ponctuel' checked='checked')
+      label(for='50') 50
+      input(type='radio', id='50', value='50', name='don-ponctuel')
+      label(for='100') 100
+      input(type='radio', id='100', value='100', name='don-ponctuel')
+
+    div.other-amount 
+      input(type='text', placeholder='Autre montant €', name='montant')
+    
+    div.deduction-fiscale 
+      label(for='particulier') Particulier
+      input(type='radio', id='particulier', value='particulier', name='fiscal')
+      p Votre don de 0 €, ne vous coûte que 0 € après réduction d'impôts de 75% dans la limite de 1 000 €, puis de 66% au-delà, dans la limite de 20% de votre revenu imposable.
+
+      label(for='organisme') Organisme
+      input(type='radio', id='organisme', value='organisme', name='fiscal')
+      p Votre don de 0 €, ne vous coûte que 0 € après réduction d'impôts de 60% de réduction d'impôts dans la limite de 5‰ du chiffre d'affaires HT (jusqu'à 20 000€).
+
+  form(method='POST')
+    h2 Mes coordonées
+
+    div.infos
+      label(for='lastname') Nom
+        input(type='text', id='lastname', placeholder='Doe' name='lastname')
+      label(for='firstname') Prénom
+      input(type='text', id='firstname', placeholder='John' name='firstname')
+      label(for='statut') Raison sociale
+      input(type='text', id='statut', placeholder='Si organisme' name='statut')
+      label(for='birthday') Date de naissance
+      input(type='date', id='birthday', name='birthday')
+      
+    div.contacts 
+      label(for='email') Email
+      input(type='email', id='email', name='email')
+      label(for='adress') Adresse
+      input(type='text', id='adress', name='adress')
+      label(for='city') Ville
+      input(type='text', id='city', name='city')
+      label(for='zipcode') Code postal
+      input(type='text', id='zipcode', name='zipcode')
+      label(for='country') Pays
+      select(name='country', id='country',)
+        option(value='') 
+        option(value='AF') Afghanistan
+        option(value='ZA') Afrique du Sud
+        option(value='AL') Albanie
+        option(value='DZ') Algérie
+        option(value='DE') Allemagne
+        option(value='MK') Ancienne République yougoslave de Macédoine
+        option(value='AD') Andorre
+        option(value='AO') Angola
+        option(value='AI') Anguilla
+        option(value='AQ') Antarctique
+        option(value='AG') Antigua-et-Barbuda
+        option(value='AN') Antilles néerlandaises
+        option(value='SA') Arabie saoudite
+        option(value='AR') Argentine
+        option(value='AM') Arménie
+        option(value='AW') Aruba
+        option(value='AU') Australie
+        option(value='AT') Autriche
+        option(value='AZ') Azerbaïdjan
+        option(value='BS') Bahamas
+        option(value='BH') Bahreïn
+        option(value='BD') Bangladesh
+        option(value='BB') Barbade
+        option(value='BE') Belgique
+        option(value='BZ') Belize
+        option(value='BJ') Bénin
+        option(value='BM') Bermudes
+        option(value='BT') Bhoutan
+        option(value='BY') Biélorussie
+        option(value='BO') Bolivie
+        option(value='BA') Bosnie-et-Herzégovine
+        option(value='BW') Botswana
+        option(value='BR') Brésil
+        option(value='BN') Brunei Darussalam
+        option(value='BG') Bulgarie
+        option(value='BF') Burkina Faso
+        option(value='BI') Burundi
+        option(value='KH') Cambodge
+        option(value='CM') Cameroun
+        option(value='CA') Canada
+        option(value='CV') Cap-Vert
+        option(value='CL') Chili
+        option(value='CN') Chine
+        option(value='CY') Chypre
+        option(value='CO') Colombie
+        option(value='KM') Comores
+        option(value='CG') Congo
+        option(value='CR') Costa Rica
+        option(value='CI') Côte d'Ivoire
+        option(value='HR') Croatie
+        option(value='CU') Cuba
+        option(value='DK') Danemark
+        option(value='DJ') Djibouti
+        option(value='DM') Dominique
+        option(value='EG') Égypte
+        option(value='SV') El Salvador
+        option(value='AE') Émirats arabes unis
+        option(value='EC') Équateur
+        option(value='ER') Érythrée
+        option(value='ES') Espagne
+        option(value='EE') Estonie
+        option(value='FM') États fédérés de Micronésie
+        option(value='US') États-Unis
+        option(value='ET') Éthiopie
+        option(value='FJ') Fidji
+        option(value='FI') Finlande
+        option(value='FR') France
+        option(value='GA') Gabon
+        option(value='GM') Gambie
+        option(value='GE') Géorgie
+        option(value='GS') Géorgie du Sud-et-les Îles Sandwich du Sud
+        option(value='GH') Ghana
+        option(value='GI') Gibraltar
+        option(value='GR') Grèce
+        option(value='GD') Grenade
+        option(value='GL') Groenland
+        option(value='GP') Guadeloupe
+        option(value='GU') Guam
+        option(value='GT') Guatemala
+        option(value='GN') Guinée
+        option(value='GQ') Guinée équatoriale
+        option(value='GW') Guinée-Bissau
+        option(value='GY') Guyane
+        option(value='GF') Guyane française
+        option(value='HT') Haïti
+        option(value='HN') Honduras
+        option(value='HK') Hong Kong
+        option(value='HU') Hongrie
+        option(value='BV') Ile Bouvet
+        option(value='CX') Ile Christmas
+        option(value='NF') Île Norfolk
+        option(value='PN') Île Pitcairn
+        option(value='AX') Iles Aland
+        option(value='KY') Iles Cayman
+        option(value='CC') Iles Cocos (Keeling)
+        option(value='CK') Iles Cook
+        option(value='FO') Îles Féroé
+        option(value='HM') Îles Heard-et-MacDonald
+        option(value='FK') Îles Malouines
+        option(value='MP') Îles Mariannes du Nord
+        option(value='MH') Îles Marshall
+        option(value='UM') Îles mineures éloignées des États-Unis
+        option(value='SB') Îles Salomon
+        option(value='TC') Îles Turques-et-Caïques
+        option(value='VG') Îles Vierges britanniques
+        option(value='VI') Îles Vierges des États-Unis
+        option(value='IN') Inde
+        option(value='ID') Indonésie
+        option(value='IQ') Iraq
+        option(value='IE') Irlande
+        option(value='IS') Islande
+        option(value='IL') Israël
+        option(value='IT') Italie
+        option(value='LY') Jamahiriya arabe libyenne
+        option(value='JM') Jamaïque
+        option(value='JP') Japon
+        option(value='JO') Jordanie
+        option(value='KZ') Kazakhstan
+        option(value='KE') Kenya
+        option(value='KG') Kirghizistan
+        option(value='KI') Kiribati
+        option(value='KW') Koweït
+        option(value='LS') Lesotho
+        option(value='LV') Lettonie
+        option(value='LB') Liban
+        option(value='LR') Libéria
+        option(value='LI') Liechtenstein
+        option(value='LT') Lituanie
+        option(value='LU') Luxembourg
+        option(value='MO') Macao
+        option(value='MG') Madagascar
+        option(value='MY') Malaisie
+        option(value='MW') Malawi
+        option(value='MV') Maldives
+        option(value='ML') Mali
+        option(value='MT') Malte
+        option(value='MA') Maroc
+        option(value='MQ') Martinique
+        option(value='MU') Maurice
+        option(value='MR') Mauritanie
+        option(value='YT') Mayotte
+        option(value='MX') Mexique
+        option(value='MC') Monaco
+        option(value='MN') Mongolie
+        option(value='MS') Montserrat
+        option(value='MZ') Mozambique
+        option(value='MM') Myanmar
+        option(value='NA') Namibie
+        option(value='NR') Nauru
+        option(value='NP') Népal
+        option(value='NI') Nicaragua
+        option(value='NE') Niger
+        option(value='NG') Nigéria
+        option(value='NU') Niué
+        option(value='NO') Norvège
+        option(value='NC') Nouvelle-Calédonie
+        option(value='NZ') Nouvelle-Zélande
+        option(value='OM') Oman
+        option(value='UG') Ouganda
+        option(value='UZ') Ouzbékistan
+        option(value='PK') Pakistan
+        option(value='PW') Palaos
+        option(value='PA') Panama
+        option(value='PG') Papouasie-Nouvelle-Guinée
+        option(value='PY') Paraguay
+        option(value='NL') Pays-Bas
+        option(value='PE') Pérou
+        option(value='PH') Philippines
+        option(value='PL') Pologne
+        option(value='PF') Polynésie française
+        option(value='PR') Porto Rico
+        option(value='PT') Portugal
+        option(value='TW') Province chinoise de Taiwan
+        option(value='QA') Qatar
+        option(value='SY') République arabe syrienne
+        option(value='CF') République centrafricaine
+        option(value='KR') République de Corée
+        option(value='MD') République de Moldavie
+        option(value='CD') République démocratique du Congo
+        option(value='DO') République dominicaine
+        option(value='IR') République islamique d'Iran
+        option(value='KP') République populaire démocratique de Corée
+        option(value='LA') République Populaire du Laos
+        option(value='CZ') République tchèque
+        option(value='TZ') République-Unie de Tanzanie
+        option(value='RE') Réunion
+        option(value='RO') Roumanie
+        option(value='GB') Royaume-Uni
+        option(value='RU') Russie
+        option(value='RW') Rwanda
+        option(value='EH') Sahara occidental
+        option(value='KN') Saint-Christophe-et-Niévès
+        option(value='SM') Saint-Marin
+        option(value='PM') Saint-Pierre-et-Miquelon
+        option(value='VA') Saint-Siège (Cité du Vatican)
+        option(value='VC') Saint-Vincent-et-les Grenadines
+        option(value='SH') Sainte-Hélène
+        option(value='LC') Sainte-Lucie
+        option(value='WS') Samoa
+        option(value='AS') Samoa américaines
+        option(value='ST') Sao Tomé-et-Principe
+        option(value='SN') Sénégal
+        option(value='CS') Serbie-et-Monténégro
+        option(value='SC') Seychelles
+        option(value='SL') Sierra Leone
+        option(value='SG') Singapour
+        option(value='SK') Slovaquie
+        option(value='SI') Slovénie
+        option(value='SO') Somalie
+        option(value='SD') Soudan
+        option(value='LK') Sri Lanka
+        option(value='SE') Suède
+        option(value='CH') Suisse
+        option(value='SR') Suriname
+        option(value='SJ') Svalbard et Jan Mayen
+        option(value='SZ') Swaziland
+        option(value='TJ') Tadjikistan
+        option(value='TD') Tchad
+        option(value='IO') Territoire britannique de l'océan Indien
+        option(value='TF') Territoire Francais du Sud
+        option(value='PS') Territoires palestiniens occupés
+        option(value='TH') Thaïlande
+        option(value='TL') Timor oriental
+        option(value='TG') Togo
+        option(value='TK') Tokelau
+        option(value='TO') Tonga
+        option(value='TT') Trinité-et-Tobago
+        option(value='TN') Tunisie
+        option(value='TM') Turkménistan
+        option(value='TR') Turquie
+        option(value='TV') Tuvalu
+        option(value='UA') Ukraine
+        option(value='UY') Uruguay
+        option(value='VU') Vanuatu
+        option(value='VE') Vénézuéla
+        option(value='VN') Vietnam
+        option(value='WF') Wallis-et-Futuna
+        option(value='YE') Yémen
+        option(value='ZM') Zambie
+        option(value='ZW') Zimbabwe 
+
+  form(method='POST')
+    h2 Mon réglement
+
+    div.recap
+    p Récapitulatif
+      table 
+        tr
+          td Montant du don
+          td 30€
+        tr
+          td Fréquence 
+          td Mensuel
+        tr
+          td Montant défiscalisé 
+          td XX €
+  
+
+    div
+      input(type='checkbox', name='CGU')
+      label(for='CGU') J'accepte les Conditions Générales d’Utilisation du service 
+    div
+      button(type='submit') Valider et payer
+      small Paiement sécurisé
+    //- Au submit, affichage de la div de paiment
+  
+    h2 Paiement 
+    form#paiement(action="")
+      fieldset Paiement par carte
+        ul
+          li(data-value='visa')
+            label(for="visa") VISA
+            input(type='radio', id='visa', name='type_de_carte')
+             
+          li(data-value='cb')
+            input(type='radio', id='cb', name='type_de_carte')
+            label(for="cb") Carte Bleue
+          
+          li(data-value='mastercard')
+            input(type='radio', id='mastercard', name='type_de_carte')
+            label(for='mastercard') Mastercard
+      fieldset  
+        p Numéro de carte
+          label(for='numero') Saisissez votre numéro de carte
+          input(type='number', id='numero')
+      
+      fieldset Paiement par Paypal 
+
+      fieldset Paiement par virement bancaire
+
+
+  
+
+
