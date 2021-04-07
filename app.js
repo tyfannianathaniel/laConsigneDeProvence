@@ -7,6 +7,10 @@ var router        = express.Router();
 
 var indexRouter = require('./app/routes/index');
 
+// Nous définissons ici les paramètres du serveur.
+var hostname = 'localhost'; 
+var port = 3000;
+
 var app = express();
 
 // view engine setup
@@ -32,3 +36,8 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+// Démarrer le serveur 
+app.listen(port, hostname, function(){
+	console.log("Mon serveur fonctionne sur http://"+ hostname +":"+port+"\n"); 
+});
