@@ -1,3 +1,5 @@
+assets/images/
+assets/medias/
 node_modules/
 build/
 *.code-workspace
