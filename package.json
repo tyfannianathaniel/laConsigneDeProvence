@@ -1,7 +1,7 @@
 {
-  "name": "laConsigneDeProvence",
+  "name": "laconsignedeprovence",
   "version": "1.0.0",
-  "description": "",
+  "description": "...",
   "main": "app.js",
   "scripts": {
     "start": "node ./bin/www",
@@ -19,5 +19,15 @@
     "morgan": "^1.10.0",
     "path": "^0.12.7",
     "pug": "^3.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyfannianathaniel/laConsigneDeProvence.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyfannianathaniel/laConsigneDeProvence/issues"
+  },
+  "homepage": "https://github.com/tyfannianathaniel/laConsigneDeProvence#readme"
 }
