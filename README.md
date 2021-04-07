@@ -6,9 +6,7 @@ Ce site a pour vocation de sensibiliser les consommateurs sur les intérêts éc
 
 ## Contributeurs au projet
 
-[Baptiste Bentivoglio](https://github.com/BaptisteBenti)
-
-[Tyfannia Ranaivoson](https://github.com/tyfannianathaniel)
+[Baptiste Bentivoglio](https://github.com/BaptisteBenti) & [Tyfannia Ranaivoson](https://github.com/tyfannianathaniel)
 
 ## contexte du projet
 

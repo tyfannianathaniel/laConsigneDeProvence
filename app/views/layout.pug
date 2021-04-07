@@ -1,19 +1,21 @@
 doctype html
 html(lang="fr")
+  
   head
+
     meta(charset='utf-8')
     meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    link(rel='stylesheet', href='')
-    title La Consigne de Provence
-  body
-    header.navbar
-      div
-        a(href='/'): img(src='', alt='La Consigne de Provence')
-      div
-        nav
-          ul
-            li: a(href="/donate") faire un don
+    
+    title La Consigne Du Verre En France
+  
+    block style
+      link(rel="stylesheet", href="/styles/main.css")
+    
+    block script
+      //- script(src="/scripts/main.js")
 
-    section#content
+  body
+
+    main
       block content
