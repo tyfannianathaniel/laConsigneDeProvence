@@ -7,6 +7,7 @@ Ce site a pour vocation de sensibiliser les consommateurs sur les intérêts éc
 ## Contributeurs au projet
 
 [Baptiste Bentivoglio](https://github.com/BaptisteBenti)
+
 [Tyfannia Ranaivoson](https://github.com/tyfannianathaniel)
 
 ## contexte du projet
@@ -15,7 +16,7 @@ Ce site a pour vocation de sensibiliser les consommateurs sur les intérêts éc
 
 ## installation en local
 
-Il vous faut NodeJs d'installer pour installer ce projet en local.
+Il vous faut NodeJs pour installer ce projet en local.
 
 1. Téléchargez le projet en récupérant l'archive sur le dépôt git ou en tapant la commande `git clone BaptisteBenti/laConsigneDeProvence` dans un terminal.
 2. Installez les dépendances via la commande `npm ci`.
